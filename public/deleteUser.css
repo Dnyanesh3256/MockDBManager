@@ -1,0 +1,111 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f5f7fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+.form-container {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    border-top: 4px solid #e74c3c;
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    color: #2c3e50;
+}
+
+h3 {
+    margin: 20px 0 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #7f8c8d;
+    text-align: center;
+}
+
+.user-email {
+    font-weight: 600;
+    color: #e74c3c;
+    word-break: break-all;
+    margin: 20px 0;
+    text-align: center;
+    padding: 10px;
+    background-color: #fdecea;
+    border-radius: 6px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input {
+    padding: 14px 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #e74c3c;
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.2);
+}
+
+input::placeholder {
+    color: #aaa;
+}
+
+button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+}
+
+button:hover {
+    background-color: #c0392b;
+}
+
+.warning-text {
+    font-size: 14px;
+    color: #e74c3c;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+@media (max-width: 480px) {
+    .form-container {
+        padding: 30px 20px;
+        margin: 20px;
+    }
+    
+    h2 {
+        font-size: 18px;
+    }
+}
