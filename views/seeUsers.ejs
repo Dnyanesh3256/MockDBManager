@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management | MockDBManager</title>
+    <link rel="stylesheet" href="/seeUsers.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <main class="dashboard">
+        <header class="header">
+            <h1>User Management <span class="brand">Dashboard</span></h1>
+            <p class="subtitle">Following are our registered users:</p>
+        </header>
+        
+        <div class="table-container">
+            <table class="user-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for( user of users ) { %>
+                        <tr>
+                            <td><%= user.id %></td>
+                            <td><%= user.username %></td>
+                            <td><%= user.email %></td>
+                            <td class="actions-cell">
+                                <div class="action-buttons">
+                                    <a href="/users/<%= user.id %>/edit" class="action-btn edit">
+                                        <i class="fas fa-edit"></i> Edit
+                                    </a>
+                                    <a href="/user/<%= user.id %>/delete" class="action-btn delete">
+                                        <i class="fas fa-trash-alt"></i> Delete
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="back-container">
+            <a href="/" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Back to Dashboard
+            </a>
+        </div>
+    </main>
+</body>
+</html>

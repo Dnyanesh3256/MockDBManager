@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MockDBManager Dashboard</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <main class="dashboard">
+        <header class="header">
+            <h1>Welcome to <span class="brand">MockDBManager</span></h1>
+        </header>
+        
+        <section class="stats">
+            <div class="stat-card">
+                <h2><%= usersCount %></h2>
+                <p>Total Users</p>
+            </div>
+        </section>
+        
+        <section class="actions">
+            <a href="/users" class="action-btn primary">
+                <i class="fas fa-users"></i>
+                <span>View Users</span>
+            </a>
+            <a href="/user/new" class="action-btn secondary">
+                <i class="fas fa-user-plus"></i>
+                <span>Add New User</span>
+            </a>
+        </section>
+    </main>
+</body>
+</html>

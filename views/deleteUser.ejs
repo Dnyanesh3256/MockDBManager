@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove User</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/deleteUser.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Remove User Account</h2>
+        <div class="user-email"><%= user.email %></div>
+
+        <form action="/user/<%= user.id %>?_method=DELETE" method="post">
+            <h3>Username: <%= user.username %></h3>
+            <input type="password" name="password" placeholder="Enter password for verification" required>
+            <button type="submit">Permanently Remove User</button>
+        </form>
+        
+        <p class="warning-text">Warning: This action cannot be undone.</p>
+    </div>
+</body>
+</html>
